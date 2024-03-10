@@ -4,7 +4,7 @@
 # Libraries
 import streamlit as st
 import pandas as pd
-from streamlit_gsheets import GSheetsConnection
+
 
 
 # DATA DE GOOGLE SHEETS
