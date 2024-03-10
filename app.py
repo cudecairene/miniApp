@@ -6,13 +6,10 @@ import streamlit as st
 import pandas as pd
 
 
-
 # DATA DE GOOGLE SHEETS
 csv_url = 'https://docs.google.com/spreadsheets/d/{key}/export?format=csv&gid={gid}'
 key = '1YL0nCg1JmwXOC25kymnRPVE7isqOIEI5'
 
-# Arrancando connector
-conn = st.connection("gsheets", type=GSheetsConnection)
 
 # Funciones cacheadas
 @st.cache_data
@@ -63,10 +60,10 @@ if busca:
     col1, col2 = st.columns(2)
     with col1:
         st.write("Categoria de marca")
-        st.header(f'{buscar_categoria(marca)}')
+        st.header(f':green[{buscar_categoria(marca)}]')
 
     with col2:
         st.write("Recomendacion")
-        st.header(f'{buscar_precio(marca,articulo)}')
+        st.header(f':green[{buscar_precio(marca,articulo)}]')
   
 
